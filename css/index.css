@@ -1,0 +1,471 @@
+/* index.css입니다. */
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.blind {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.row {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+#header {
+  background: #fff;
+}
+#header .row {
+  display: flex;
+  justify-content: space-between;
+}
+#header .row h1 {
+  /* float: left; */
+  padding: 10px 0;
+}
+#header .row .menuopen {
+  display: none;
+}
+#header .row #nav {
+  /* float: right; */
+  display: flex;
+}
+#header .row #nav ul.depth1 {
+  display: flex;
+}
+#header .row #nav ul.depth1 > li {
+  /* float: left; */
+  font-family: "Noto Sans KR" sans-serif;
+  font-weight: 900;
+  position: relative;
+  font-weight: middle;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+}
+#header .row #nav ul.depth1 > li > a {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 0px 22px;
+  display: flex;
+  color: #333;
+  /* height: 85px;
+  line-height: 85px; */
+}
+#header .row #nav ul.depth2 {
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: left;
+  z-index: 999;
+}
+#header .row #nav ul.depth2 > li > a {
+  display: block;
+  padding: 12px 0 12px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(132, 132, 132, 0.15);
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s;
+}
+#header .row #nav ul.depth2 > li > a:hover {
+  background-color: #000;
+  color: #fff;
+}
+/*슬라이더 구역*/
+#section .slideOuter .slideInner {
+  position: relative;
+}
+#section .slideOuter .slideInner button.slick-arrow {
+  border: none;
+  background: none;
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+#section .slideOuter .slideInner button.slick-next {
+  right: 50px;
+}
+#section .slideOuter .slideInner button.slick-prev {
+  left: 50px;
+  z-index: 999;
+}
+#section .slideOuter .slideInner ul.slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 50px;
+}
+#section .slideOuter .slideInner ul.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#section .slideOuter .slideInner ul.slick-dots li button {
+  width: 9px;
+  height: 9px;
+  text-indent: 9999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  border: none;
+}
+#section .slideOuter .slideInner ul.slick-dots li.slick-active button {
+  background: rgba(255, 255, 255, 1);
+}
+/* 슬라이드 자동재생 멈춤 버튼 코드 시작 */
+#section .slideOuter {
+  position: relative;
+}
+#section .slideOuter .plapau {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  font-size: 15px;
+  color: #fff;
+  margin-left: 50px;
+}
+/*========================================*/
+#section .slideOuter .slide {
+  position: relative;
+  height: 60vw;
+}
+#section .slideOuter .slide1 {
+  background: url(../image/main01.jpg) no-repeat center / cover;
+}
+#section .slideOuter .slide2 {
+  background: url(../image/main02.jpg) no-repeat center / cover;
+}
+#section .slideOuter .slide3 {
+  background: url(../image/main03.jpg) no-repeat center / cover;
+}
+#section .slideOuter .slide4 {
+  background: url(../image/main04.jpg) no-repeat center / cover;
+}
+#section .slideOuter .slide .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+#section .slideOuter .slide .text p {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0 0 25px;
+  opacity: 0;
+  transform: translate(0, 100% 0);
+}
+#section .slick-current.slick-active.slide .text p {
+  animation: fadeInUp 1s 1 both 0.3s;
+}
+#section .slide .text h2 {
+  font-size: 18px;
+  opacity: 0;
+  transform: translate(0, 100% 0);
+}
+#section .slick-current.slick-active.slide .text h2 {
+  animation: fadeInUp 1s 1 both 1.3s;
+}
+#section .aboutUs {
+  overflow: hidden;
+}
+#section .aboutUs .row {
+  padding: 80px 0 50px;
+}
+#section .aboutUs h2 {
+  font-size: 40px;
+  color: #333;
+  padding: 0 0 20px;
+  font-weight: normal;
+  text-align: center;
+}
+#section .aboutUs p.slogun {
+  font-size: 15px;
+  padding: 0 0 50px;
+  text-align: center;
+}
+#section .aboutUs p span {
+  display: block;
+  padding: 3px 0;
+}
+#section .aboutUs ul {
+  /* overflow: hidden; */
+  display: flex;
+}
+#section .aboutUs ul li {
+  /* float: left;
+  width: 33.33%; */
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+#section .aboutUs .photo {
+  display: block;
+  width: 100%;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+#section .aboutUs .photo:hover {
+  opacity: 0.7;
+  transform: scale(0.99, 0.99);
+}
+#section .aboutUs ul li h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 30px 0 20px;
+}
+#section .aboutUs ul li p {
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+#section .aboutUs ul li p span {
+  display: block;
+  padding: 3px 0;
+}
+#section .aboutUs ul li a {
+  display: inline-block;
+  font-size: 14px;
+  color: #000;
+  margin: 0 0 24.5px;
+  font-weight: bold;
+  position: relative;
+}
+#section .creative {
+  /* overflow: hidden; */
+  display: flex;
+  padding: 100px 0;
+  background: #fafafa;
+}
+#section .creative .videoBox {
+  /* float: left;
+  width: 50%; */
+  flex: 1;
+}
+#section .creative .videoBox video {
+  width: 100%;
+}
+#section .creative .text {
+  /* float: left;
+  width: 50%; */
+  flex: 1;
+  padding: 50px 100px;
+}
+#section .creative .text h2 {
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+#section .creative .text h2 span {
+  display: block;
+}
+#section .creative .text p {
+  font-size: 14px;
+  word-break: keep-all; /*페이지가 사이즈가 달라질때 단어잘림 허용안함*/
+  line-height: 1.5em;
+  padding-right: 50px;
+}
+#section .creative .text p strong {
+  display: block;
+  font-size: 20px;
+  margin: 40px 0;
+}
+#section .creative .text a {
+  display: block;
+  margin-top: 50px;
+}
+#section .BusinessArea {
+  color: #333;
+  padding: 120px 0;
+  text-align: center;
+}
+#section .BusinessArea h2 {
+  font-size: 40px;
+  font-weight: normal;
+}
+#section .BusinessArea p {
+  font-size: 15px;
+  /* line-height: 2em; */
+  margin: 20px 0 80px;
+}
+#section .BusinessArea p span {
+  display: block;
+  padding: 3px 0;
+}
+#section .BusinessArea ul {
+  /* overflow: hidden; */
+  display: flex;
+  flex-wrap: wrap;
+}
+#section .BusinessArea ul li {
+  /* float: left;
+  width: 20%; */
+  flex: 1 1 20%;
+  padding: 10px;
+}
+#section .BusinessArea ul li > a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+#section .BusinessArea ul li > a .overbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding-top: 60%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+#section .BusinessArea ul li:hover > a .overbox {
+  opacity: 1;
+}
+
+#section .BusinessArea ul li img {
+  transition: all 0.5s;
+  transform-origin: center top;
+}
+#section .BusinessArea ul li:hover img {
+  transform: scale(1.1);
+}
+#section .BestService {
+  background: url(../image/banner04.jpg) right center / cover;
+  height: 587px;
+  text-align: center;
+  padding-top: 100px;
+  font-family: "Noto Sans KR" sans-serif;
+}
+#section .BestService h2 {
+  font-size: 40px;
+  font-weight: normal;
+  padding: 10px 0 20px;
+  text-align: center;
+  color: #333;
+}
+#section .BestService > p {
+  font-size: 15px;
+  line-height: 2em;
+  margin: 20px 0 80px;
+}
+#section .BestService p span {
+  display: block;
+  padding: 3px 0;
+}
+#section .contact {
+  margin-top: -200px;
+}
+#section .contact .row {
+  /* overflow: hidden; */
+  display: flex;
+}
+#section .contact .map {
+  /* float: left;
+  width: 50%; */
+  flex: 1;
+  padding-bottom: 100px;
+}
+#section .contact .query {
+  /* float: left;
+  width: 50%; */
+  flex: 1;
+  background: #fff;
+  height: 450px;
+  padding: 100px;
+}
+#section .contact .query h3 {
+  font-size: 25px;
+  width: 100%;
+  padding: 10px 0 20px;
+  float: left;
+  color: #333;
+}
+#section .contact .query p.greeting {
+  font-size: 17px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+#section .contact .query p.address {
+  font-size: 14px;
+}
+#section .contact .query p.address > span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+#section .contact .query p.btn {
+  font-size: 20px;
+  padding: 60px 20px;
+}
+#section .contact .query p.btn a {
+  display: inline-block;
+  color: #fff;
+  padding: 15px 50px;
+  margin-right: 5px;
+  border: 1px solid #000;
+  background: #000;
+  text-align: left;
+}
+#footer {
+  margin-top: 50px;
+  padding: 50px 0;
+  border-top: 1px solid #222;
+}
+#footer .row {
+  /* overflow: hidden; */
+  display: flex;
+}
+#footer .btmlogo {
+  /* float: left; */
+  flex: 1;
+}
+#footer .btmmenu {
+  /* float: right; */
+  flex: 1;
+}
+#footer .btmmenu .companyinfo a {
+  /* float: right; */
+  flex: 1;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 10px 20px 0;
+}
+#footer .btmmenu .companyinfo .addr {
+  flex: 1;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 10px 20px 0;
+}
+#footer .btmmenu .sns {
+  /* float: right; */
+  flex: 1;
+  opacity: 50%;
+}
