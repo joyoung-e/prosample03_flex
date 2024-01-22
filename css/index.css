@@ -51,6 +51,7 @@ img {
   display: flex;
 }
 #header .row #nav ul.depth1 {
+  /*  자식들을 한줄로 정렬하기 위해 사용했던 float 정렬을 삭제하고 부모한테 display: flex 속성 추가 */
   display: flex;
 }
 #header .row #nav ul.depth1 > li {
@@ -321,12 +322,13 @@ img {
 #section .BusinessArea ul {
   /* overflow: hidden; */
   display: flex;
-  flex-wrap: wrap;
+  justify-content: left;
+  flex-wrap: wrap; /* 자식들을 두줄 이상으로 정렬할때  flex-wrap: wrap 속성 추가*/
 }
 #section .BusinessArea ul li {
   /* float: left;
   width: 20%; */
-  flex: 1 1 20%;
+  flex: 0 1 20%;
   padding: 10px;
 }
 #section .BusinessArea ul li > a {
@@ -442,6 +444,7 @@ img {
 #footer .row {
   /* overflow: hidden; */
   display: flex;
+  justify-content: space-between;
 }
 #footer .btmlogo {
   /* float: left; */
@@ -466,6 +469,7 @@ img {
 }
 #footer .btmmenu .sns {
   /* float: right; */
-  flex: 1;
+  /* flex: 1; */
   opacity: 50%;
+  margin-left: 500px;
 }
